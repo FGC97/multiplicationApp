@@ -10,16 +10,20 @@ const formElement = document.getElementById("form");
 
 const scoreElement = document.getElementById("score");
 
+// Aqui le doy a score el valor que trae desde la memoria del navegador.
+let score = JSON.parse(localStorage.getItem("score"));
+if (!score){
+    score = 0;
+}
+
 questionElement.innerText = "What is " + num1 + " multiply by " + num2 +"?"; //'what is ${num1} multiply by ${num2}' esta forma funciona por las comillas simples.
 
-let score = JSON.parse(localStorage.getItem("score"));
-
-
 const correctAnswer = num1 * num2;
-scoreElement.innerText = "score " + score;
+scoreElement.innerText = "score: " + score;
 
 
-// each time someone submit the form, we want to get the information.
+
+// each time someone submit the form, we want to get the information from de console storage.
 formElement.addEventListener("submit", () => {
     const userAnswer = +inputElement.value;
     if (userAnswer === correctAnswer) {
@@ -33,7 +37,7 @@ formElement.addEventListener("submit", () => {
 })
 
 function updateLocalStorage () {
-    localStorage.setItem("score",JSON.stringify(score))
+    localStorage.setItem("score",JSON.stringify(score));
 }
 
 
