@@ -1,0 +1,62 @@
+body {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(0, 162, 215);
+    font-family:'Courier New', Courier, monospace
+}
+
+.form {
+    background-color: aliceblue;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0, 0, 0.8);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;  /* Si no pongo esto, el text input no esta completamente alineado */
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+    border: solid 4px blue;
+    color: blue;
+    
+}
+
+/* esto es sudo? entrar en input para colocarle fondo blanco distinto al del form */
+.input::placeholder{ 
+    color: lightgray;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.btn {
+    background-color: blue;
+    color: white;
+    border: none;
+    display: block;
+    width: 100%;
+    padding: 6px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.btn:hover{
+    filter: brightness(1.5);
+} /* Esto hace que al poner el cursor sobre el submit, se vuelva mas blanco*/
+
+.score {
+    color: blue;
+    text-align: right;
+    font-family: 'Courier New', Courier, monospace;
+}
+
